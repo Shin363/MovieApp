@@ -7,9 +7,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
         {/* path안에 들어가는 건 url의 경로인데, 동적인 url을 형성하기 위해서 :id 를 넣어준것. {id:~~ } 형식으로 보내진다.*/}
-        <Route path="/movie/:id" element={<Detail />} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/movie/id`}
+          element={<Detail />}
+        />
       </Routes>
     </Router>
   );
