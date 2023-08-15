@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 function Detail() {
   // id 찾아오기(url의 상세정보를 알려줌)
   const { id } = useParams();
+  // await 사용할 때는 async를 사용해야 한다.
   const getMovie = async () => {
     const json =
       await // 아이디를 알고 있으니까 API로부터 정보를 fetch해올 수 있음

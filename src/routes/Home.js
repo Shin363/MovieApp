@@ -21,7 +21,7 @@ function Home() {
   return (
     <div>
       {loading ? (
-        <h1>Loading...</h1>
+        <h1>Loading...로딩중...</h1>
       ) : (
         movies.map((movie) => (
           <Movie
